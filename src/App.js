@@ -4,9 +4,14 @@ import './App.css';
 import Dashboard from './components/Dashboard'
 import Preferences from './components/Preferences'
 import Login from './components/Login'
+import useToken from './hooks/useToken'
+
 
 function App() {
-  const [token, setToken] = useState();
+
+  const { token, setToken } = useToken();
+  
+  console.log("hello from app"+token)
   if(!token) {
     return <Login setToken={setToken} />
   }

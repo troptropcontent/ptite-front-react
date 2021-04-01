@@ -17,7 +17,6 @@ var requestOptions = {
 fetch("http://localhost:4000/api/v1/login", requestOptions)
   .then(response => response.json())
   .then(result => {
-    console.log(result.token)
     functionSetToken(result.token)
   })
   .catch(error => console.log('error', error));
