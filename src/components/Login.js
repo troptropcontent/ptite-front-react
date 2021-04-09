@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import login from '../services/login'
 
 export class Login extends Component {
 
@@ -10,11 +11,13 @@ export class Login extends Component {
     }
   }
   
+  // update the username state of the component with the input on each change
   handleChangeInputUsername = (event) => {
-    console.log("Username update : "+event.target.value)
+    this.setState({username: event.target.value})
   }
+  // update the password state of the component with the input on each change
   handleChangeInputPassword = (event) => {
-    console.log("Password update : "+event.target.value)
+    this.setState({password: event.target.value})
   }
 
   render() {
