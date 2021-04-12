@@ -17,7 +17,7 @@ const login = (username,password,setToken) => {
   };
 
   fetch("http://localhost:4000/api/v1/login", requestOptions)
-  .then(response => response.text())
+  .then(response => response.json())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
