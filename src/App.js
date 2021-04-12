@@ -5,6 +5,8 @@ import Dashboard from './components/Dashboard'
 import Preferences from './components/Preferences'
 import Login from './components/Login'
 import fetchEvent from './services/fetchEvent';
+import Navbar from './components/Navbar'
+import NewEventBtn from './components/NewEventBtn'
 
 
 export class App extends Component {
@@ -45,8 +47,7 @@ export class App extends Component {
     
     return (
       <div className="container">
-        <h1 className="title">Hello from APP, you are now connected</h1>
-
+        <Navbar/>
         <BrowserRouter>
           <Switch>
             <Route path="/dashboard">
@@ -57,6 +58,7 @@ export class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
+        <NewEventBtn/>
       </div>
     )
   }
