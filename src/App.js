@@ -5,31 +5,37 @@ import Dashboard from './components/Dashboard'
 import Preferences from './components/Preferences'
 import Login from './components/Login'
 
-
 export class App extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-      
+      connected: this.getToken() ? true : false
     }
   }
 
   setToken = (token) => {
-    this.setState({token: token});
+    sessionStorage.setItem('token', token.token)
+    this.setState({connected: true})
+  }
+
+  getToken  = () => {
+    const tokenSessionStorage = sessionStorage.getItem('token')
+    return tokenSessionStorage ? tokenSessionStorage : null
   }
 
 
   render() { 
-
-    if (!this.state.token) {
+    console.log("Hello from get token"+this.getToken())
+    if (!this.getToken()) {
       return <Login setToken={this.setToken} />
     }
 
 
     return (
       <div className="container">
-        <h1 className="title">Hello from APP</h1>
+        <h1 className="title">Hello from APP, you are now connected
+        </h1>
         <BrowserRouter>
           <Switch>
             <Route path="/dashboard">

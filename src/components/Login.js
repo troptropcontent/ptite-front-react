@@ -20,12 +20,18 @@ export class Login extends Component {
     this.setState({password: event.target.value})
   }
 
+  handleSubmitLogin = (event) => {
+    event.preventDefault()
+    console.log(event)
+    login(this.state.username, this.state.password,this.props.setToken)
+  }
+
   render() {
     return (
 
       <div className="login-form">
         <h1>Please login</h1>
-        <form>
+        <form onSubmit={this.handleSubmitLogin}>
           <label htmlFor="">
             <p>Username</p>
             <input type="text" onChange={this.handleChangeInputUsername}/>
