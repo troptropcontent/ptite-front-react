@@ -4,7 +4,6 @@ import './App.css';
 import Dashboard from './components/Dashboard'
 import Preferences from './components/Preferences'
 import Login from './components/Login'
-import fetchEvents from './services/fetchEvent'
 import fetchEvent from './services/fetchEvent';
 
 
@@ -40,12 +39,10 @@ export class App extends Component {
 
 
   render() { 
-    console.log("Hello from get token"+this.getToken())
     if (!this.getToken()) {
       return <Login setToken={this.setToken} />
     }
     
-
     return (
       <div className="container">
         <h1 className="title">Hello from APP, you are now connected</h1>
