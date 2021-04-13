@@ -1,0 +1,11 @@
+.newEventBtn {
+  width: fit-content;
+  background-color: beige;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  display: flex;
+  
+}
+
