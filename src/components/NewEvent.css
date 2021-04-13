@@ -1,0 +1,13 @@
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+.new-invent-input>h1 {
+  color: #28527a;
+}

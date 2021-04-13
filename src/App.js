@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Dashboard from './components/Dashboard'
-import Preferences from './components/Preferences'
+import NewEvent from './components/NewEvent'
 import Login from './components/Login'
 import fetchEvent from './services/fetchEvent';
 import Navbar from './components/Navbar'
@@ -50,11 +49,11 @@ export class App extends Component {
         <Navbar/>
         <BrowserRouter>
           <Switch>
-            <Route path="/dashboard">
+            {/* <Route path="/dashboard">
               <Dashboard eventList={this.state.eventList}/>
-            </Route>
-            <Route path="/preferences">
-              <Preferences/>
+            </Route> */}
+            <Route path="/events/new">
+              <NewEvent/>
             </Route>
           </Switch>
         </BrowserRouter>
