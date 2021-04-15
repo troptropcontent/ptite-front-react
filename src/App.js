@@ -57,7 +57,7 @@ export class App extends Component {
               <NewEvent/>
             </Route>
             <Route path="/groups/new">
-              <NewGroup/>
+              <NewGroup token={this.getToken()}/>
             </Route>
           </Switch>
         </BrowserRouter>

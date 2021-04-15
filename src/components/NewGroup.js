@@ -16,7 +16,7 @@ export class NewGroup extends Component {
             <h1 className="NewGroup-label-name">Nom :</h1>
             <input type="text" name="name" id="NewGroup-input-name" className="NewGroup-input-name"/>
           </label>
-          <UserSearchEngine/>
+          <UserSearchEngine token={this.props.token}/>
           <input type="submit" value="Create new group"/>
 
         </form>
