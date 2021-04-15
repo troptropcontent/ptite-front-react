@@ -5,7 +5,7 @@ export class UserInputCheckbox extends Component {
   render() {
     return (
       <div className="UserInputCheckbox-wrapper">
-          <label htmlFor="user">
+          <label htmlFor={this.props.user.id}>
             <input type="checkbox" id={this.props.user.id} name="usersSelected" value={this.props.user.id}/>
             <p className="user-input-checkbox-name">
               {this.props.user.name}
