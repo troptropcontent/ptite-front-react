@@ -8,11 +8,12 @@ L'idée ? En quelques clics, je peux inviter des d'amis :
 
 1. En créant différents groupes d'amis dans l'application;
 
-2. En renseignant:
-    a. **Quoi ?** Ptit boeuf bourguignon ? Ptit brunch ?
-    b. **Quand ?** Demain
-    c. **Où ?** Chez moi
-    d. **Qui ?** Anciens du lycée
+2. En créant de nouveaux événements très rapidement:
+
+    * **Quoi ?** Ptit boeuf bourguignon ? Ptit brunch ?
+    * **Quand ?** Demain
+    * **Où ?** Chez moi
+    * **Qui ?** Anciens du lycée
 
 Toutes les personnes du groupe concerné ("Anciens du lycée") reçoivent une invitation sous forme de notification ! 
 
