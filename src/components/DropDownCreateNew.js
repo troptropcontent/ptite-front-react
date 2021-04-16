@@ -5,7 +5,7 @@ import "./DropDownCreateNew.css"
 export class DropDownCreateNew extends Component {
   render() {
     return (
-      <a classNme="DropDownCreateNew-link" href="/groups/new">
+      <a className="DropDownCreateNew-link" href="/groups/new">
         <div className="DropDownCreateNew-wrapper">
           <div className="DropDownCreateNew-icon">
             <PlusCircle/>

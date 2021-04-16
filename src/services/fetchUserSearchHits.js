@@ -1,4 +1,4 @@
-const fetchUserSearchHits = (token,query) => {
+const fetchUserSearchHits = (token,query, setHitsList) => {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", `Bearer ${token}`);
   
@@ -8,9 +8,9 @@ const fetchUserSearchHits = (token,query) => {
     redirect: 'follow'
   };
   
-  fetch(`http://localhost:4000/api/v1/users/search?query=T${query}`, requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
+  fetch(`http://localhost:4000/api/v1/users?query=${query}`, requestOptions)
+    .then(response => response.json())
+    .then(result => setHitsList(result))
     .catch(error => console.log('error', error));  
 }
 
