@@ -14,8 +14,10 @@ L'idée ? En quelques clics, je peux inviter des d'amis :
     c. **Où ?** Chez moi
     d. **Qui ?** Anciens du lycée
 
-Et toutes les personnes du groupe concerné ("Anciens du lycée") reçoivent une invitation sous forme de notification ! 
+Toutes les personnes du groupe concerné ("Anciens du lycée") reçoivent une invitation sous forme de notification ! 
+
 Il leur suffit alors de répondre Oui || Peut-etre || Non, d'un seul click.
+
 
 S'ils acceptent, l'évènement s'ajoute à leur agenda.
 
