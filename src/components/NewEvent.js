@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './NewEvent.css'
+import DropDownInput from './DropDownInput'
 
 export class NewEvent extends Component {
   render() {
@@ -12,11 +13,11 @@ export class NewEvent extends Component {
           </label>
           <label className="new-invent-input who">
             <h1>Qui ?</h1>
-            <input type="text" name="who" />
+            <DropDownInput type="text" name="who"/>
           </label>
           <label className="new-invent-input where">
             <h1>Où ?</h1>
-            <input type="text" name="where" />
+            <DropDownInput type="text" name="where"/>
           </label>
           <label className="new-invent-input when">
             <h1>Quand ?</h1>

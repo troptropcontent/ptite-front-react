@@ -1,0 +1,7 @@
+.drop-down-propositions{
+  display: none;
+}
+
+.drop-down-propositions.open {
+  display: block;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import NewEvent from './components/NewEvent'
+import NewGroup from './components/NewGroup'
 import Login from './components/Login'
 import fetchEvent from './services/fetchEvent';
 import Navbar from './components/Navbar'
@@ -54,6 +55,9 @@ export class App extends Component {
             </Route> */}
             <Route path="/events/new">
               <NewEvent/>
+            </Route>
+            <Route path="/groups/new">
+              <NewGroup token={this.getToken()}/>
             </Route>
           </Switch>
         </BrowserRouter>

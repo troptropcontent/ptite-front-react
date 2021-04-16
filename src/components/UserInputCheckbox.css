@@ -1,0 +1,8 @@
+.UserInputCheckbox-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+
+.UserInputCheckbox-wrapper>label{
+  display: flex;
+}
