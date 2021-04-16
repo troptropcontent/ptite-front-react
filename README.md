@@ -2,9 +2,9 @@
 
 # Ptite?
 
-Simple application pour l'organisation de repas entre amis ou pour se rassembler tout simplement. 
+Une application pour l'organisation de repas entre amis ou pour se rassembler tout simplement. 
 
-L'idée est simple, en quelques clics je peux inviter des groupes d'amis en renseignant : 
+L'idée, en quelques clics je peux inviter des groupes d'amis en renseignant : 
 
 1. **Quoi ?** Ptit boeuf bourguignon ? Ptite biere ?
 2. **Quand ?** Demain
