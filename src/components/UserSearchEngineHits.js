@@ -18,19 +18,24 @@ export class UserSearchEngineHits extends Component {
   addSelectedUser = (user) => {
     const actualUsersSelected = this.state.selectedUsers
     const newList = actualUsersSelected.push(user)
-    setUserSelected(newList)
+    this.setUserSelected(newList)
+  }
+
+  userSelected = (user) => {
+    const actualUsersSelected = this.state.selectedUsers
+    return actualUsersSelected.find(userSelected => userSelected == user) == undefined ? false : true
   }
 
   removeSelectedUser = (user) => {
     const actualUsersSelected = this.state.selectedUsers
     const userToDeleteIndex = actualUsersSelected.find(userSelected => userSelected == user)
-    const newList = actualUsersSelected.splice((userToDeleteIndex+1), 1)
-    setUserSelected(newList)
+    const newList = actualUsersSelected.splice((userToDeleteIndex), 1)
+    this.setUserSelected(newList)
   }
   
   render() {
     const hits = this.props.hitsList 
-    const hitsList = hits ? hits.map((hit) => <UserSearchEngineHitsCheckBox hit={hit} addSelectedUser={this.addSelectedUser} removeSelectedUser={this.removeSelectedUser}  />) : null
+    const hitsList = hits ? hits.map((hit) => <UserSearchEngineHitsCheckBox hit={hit} userSelected={this.userSelected(hit.id)} addSelectedUser={this.addSelectedUser} removeSelectedUser={this.removeSelectedUser}  />) : null
     
     return (
       <div className="UserSearchEngineHits">
