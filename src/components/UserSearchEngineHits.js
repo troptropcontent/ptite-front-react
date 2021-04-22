@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import UserSearchEngineHitsCheckBox from './UserSearchEngineHitsCheckBox'
 import UserAvatar from './UserAvatar'
 import RemovableTile from './RemovableTile'
+import './UserSearchEngineHits.css'
 
 export class UserSearchEngineHits extends Component {
 
@@ -41,7 +42,7 @@ export class UserSearchEngineHits extends Component {
   render() {
     const hits = this.props.hitsList 
     const hitsList = hits ? hits.map((hit) => <UserSearchEngineHitsCheckBox hit={hit} userSelected={this.userSelected(hit.id)} addSelectedUser={this.addSelectedUser} removeSelectedUser={this.removeSelectedUser}  />) : null
-    const userSelectedTiles = this.state.selectedUsers.map(serializedUser => <RemovableTile tileContent={<UserAvatar size={50} firstName={serializedUser[1]} lastName={serializedUser[2]} photoId={serializedUser[3]} />} /> )
+    const userSelectedTiles = this.state.selectedUsers.map(serializedUser => <RemovableTile itemId={serializedUser[0]} tileContent={<UserAvatar size={50} firstName={serializedUser[1]} lastName={serializedUser[2]} photoId={serializedUser[3]}/>} crossFunction={this.removeSelectedUser} /> )
     return (
 
       
