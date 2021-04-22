@@ -4,7 +4,9 @@ import './UserSearchEngineHitsCheckBox.css'
 
 export class UserSearchEngineHitsCheckBox extends Component {
   handleChange = (event) => {
-    console.log(event.target.attributes.id.value)
+    const userId = event.target.attributes.id.value
+    const userSelected = this.props.userSelected
+    userSelected ? this.props.removeSelectedUser(userId) : this.props.addSelectedUser(userId)
   }
 
   render() {
@@ -16,7 +18,7 @@ export class UserSearchEngineHitsCheckBox extends Component {
       <p className="user-input-checkbox-name">
         {firstName+' '+lastName}
       </p>
-      <input type="checkbox" id={id} name="usersSelected" value={id} onChange={this.handleChange}/>
+      <input type="checkbox" id={id} name="usersSelected" value={id} onChange={this.handleChange} checked={this.props.userSelected} />
     </label>
     )
   }
