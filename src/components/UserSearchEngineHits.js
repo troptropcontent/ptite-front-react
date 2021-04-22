@@ -16,25 +16,22 @@ export class UserSearchEngineHits extends Component {
   }
 
   addSelectedUser = (user) => {
-    console.log("Hello form add user")
     const selectedUsers = this.state.selectedUsers
-    selectedUsers.push(parseInt(user))
+    const serializedUser=[user.id, user.last_name, user.first_name, user.photo_id]
+    selectedUsers.push(serializedUser)
     this.setUserSelected(selectedUsers)
-    // const actualUsersSelected = this.state.selectedUsers
-    // const newList = actualUsersSelected.push(user)
-    // this.setUserSelected(newList)
   }
 
-  userSelected = (user) => {
+  userSelected = (id) => {
     const actualUsersSelected = this.state.selectedUsers
-    const checked = actualUsersSelected.find(userSelected => userSelected === user) === undefined ? false : true
+    const checked = actualUsersSelected.find(userSelected => userSelected[0] === id) === undefined ? false : true
     return checked
   }
 
-  removeSelectedUser = (user) => {
+  removeSelectedUser = (id) => {
     console.log("Hello form remove user")
     const actualUsersSelected = this.state.selectedUsers
-    const indexOfTheUser = actualUsersSelected.findIndex(element => element === parseInt(user))
+    const indexOfTheUser = actualUsersSelected.findIndex(element => element[0] === id)
     actualUsersSelected.splice(indexOfTheUser,1)
     this.setUserSelected(actualUsersSelected)
   }

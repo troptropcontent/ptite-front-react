@@ -4,10 +4,11 @@ import './UserSearchEngineHitsCheckBox.css'
 
 
 export class UserSearchEngineHitsCheckBox extends Component {
-  handleChange = (event) => {
-    const userId = event.target.attributes.id.value
+
+  handleChange = () => {
+    const user = this.props.hit
     const userSelected = this.props.userSelected
-    userSelected ? this.props.removeSelectedUser(userId) : this.props.addSelectedUser(userId)
+    userSelected ? this.props.removeSelectedUser(user.id) : this.props.addSelectedUser(user)
   }
 
   render() {
