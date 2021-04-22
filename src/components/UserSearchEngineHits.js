@@ -42,9 +42,12 @@ export class UserSearchEngineHits extends Component {
   render() {
     const hits = this.props.hitsList 
     const hitsList = hits ? hits.map((hit) => <UserSearchEngineHitsCheckBox hit={hit} userSelected={this.userSelected(hit.id)} addSelectedUser={this.addSelectedUser} removeSelectedUser={this.removeSelectedUser}  />) : null
-    
+    const userSelectedTiles = this.state.selectedUsers.map(id => <p>{id}</p>)
     return (
       <div className="UserSearchEngineHits">
+        <div className="usersSelected">
+        {userSelectedTiles}
+        </div>
         {hitsList}
       </div>
     )

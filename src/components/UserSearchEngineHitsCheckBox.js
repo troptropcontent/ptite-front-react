@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import UserAvatar from './UserAvatar'
 import './UserSearchEngineHitsCheckBox.css'
 
 
@@ -9,10 +10,6 @@ export class UserSearchEngineHitsCheckBox extends Component {
     userSelected ? this.props.removeSelectedUser(userId) : this.props.addSelectedUser(userId)
   }
 
-  cloudinaryUrl = (photoId) => {
-    return `https://res.cloudinary.com/dzqfobpd7/image/upload/c_fill,h_50,w_50/${photoId}`
-  }
-
   render() {
     const id = this.props.hit.id
     const firstName = this.props.hit.first_name
@@ -21,7 +18,7 @@ export class UserSearchEngineHitsCheckBox extends Component {
     return (
     <label className = "UserSearchEngineHitsCheckBox" key={id} htmlFor={id}>
       <div className="user-img-name">
-        <img src={this.cloudinaryUrl(photoId)} alt={firstName+" "+lastName+" photo"} />
+        <UserAvatar firstName={firstName} lastName={lastName} photoId={photoId} size={50}/>
         <p className="user-input-checkbox-name">
           {firstName+' '+lastName}
         </p>
