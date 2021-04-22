@@ -3,3 +3,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.user-img-name{
+  display: flex;
+}
+
+.user-img-name>img{
+  margin-right: 10px;
+}
