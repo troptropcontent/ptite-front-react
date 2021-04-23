@@ -48,9 +48,11 @@ export class UserSearchEngineHits extends Component {
       
       <div className="UserSearchEngineHits">
         <div className="usersSelected">
-        {userSelectedTiles}
+          {userSelectedTiles.length === 0 ? <p>Ajoutez des personnes</p> : userSelectedTiles}
         </div>
-        {hitsList}
+        <div className="hits">
+          {hitsList}
+        </div>
       </div>
     )
   }
