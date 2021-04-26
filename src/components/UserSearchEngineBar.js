@@ -5,8 +5,10 @@ import './UserSearchEngineBar.css'
 export class UserSearchEngineBar extends Component {
 
   
-
-  
+  handleChange = (event) => {
+    console.log(event.target.value)
+    fetchUserSearchHits(this.props.token,event.target.value, this.props.setHitsList)
+  }
 
   render() {
     return (
