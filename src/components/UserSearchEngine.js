@@ -23,7 +23,7 @@ export class UserSearchEngine extends Component {
   addSelectedUser = (user) => {
     const selectedUsers = this.state.selectedUsers
     const serializedUser=[user.id, user.last_name, user.first_name, user.photo_id]
-    selectedUsers.push(serializedUser)
+    selectedUsers.unshift(serializedUser)
     this.setUserSelected(selectedUsers)
   }
 
