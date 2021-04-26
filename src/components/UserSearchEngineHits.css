@@ -1,6 +1,7 @@
 .usersSelected{
   display: flex;
   padding: 10px;
+  overflow: scroll;
 }
 
 .hits{
