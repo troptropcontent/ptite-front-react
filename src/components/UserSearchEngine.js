@@ -14,12 +14,16 @@ export class UserSearchEngine extends Component {
   setHitsList = (hits) => {
     this.setState({hitsList: hits})
   }
+
+  setUsersSelected = (users) => {
+    this.setState({usersSelected: users})
+  }
   
   render() {
     return (
       <div className="UserSearchEngine">
         <UserSearchEngineBar token={this.props.token} setHitsList={this.setHitsList}/>
-        <UserSearchEngineHits hitsList={this.state.hitsList}/>
+        <UserSearchEngineHits hitsList={this.state.hitsList} />
       </div>
     )
   }
