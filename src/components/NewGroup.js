@@ -12,7 +12,7 @@ export class NewGroup extends Component {
       <div className="NewGroup-wrapper">
 
         <form action="/groups" method="post" onSubmit={this.handleSubmit}>
-          <label htmlFor="name">
+          <label htmlFor="name" className="new-group-name-input">
             <h1 className="NewGroup-label-name">Nom :</h1>
             <input type="text" name="name" id="NewGroup-input-name" className="NewGroup-input-name"/>
           </label>

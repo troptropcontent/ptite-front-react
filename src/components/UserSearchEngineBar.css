@@ -1,0 +1,19 @@
+a.userSearchDoneBtn {
+  text-decoration: none;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 4px;
+  border-radius: 10%;
+}
+
+input#userInput {
+  width: 100%;
+  border: none;
+}
+
+.userSearchInputZone {
+  display: flex;
+  border: 1px solid;
+  padding: 2px;
+  align-items: center;
+}
