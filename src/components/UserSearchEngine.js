@@ -23,7 +23,7 @@ export class UserSearchEngine extends Component {
     return (
       <div className="UserSearchEngine">
         <UserSearchEngineBar token={this.props.token} setHitsList={this.setHitsList}/>
-        <UserSearchEngineHits hitsList={this.state.hitsList} />
+        <UserSearchEngineHits hitsList={this.state.hitsList} setUsersSelected={this.setUsersSelected}/>
       </div>
     )
   }
