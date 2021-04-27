@@ -34,10 +34,13 @@ export class UserSearchEngine extends Component {
     this.setUserSelected(actualUsersSelected)
   }
 
-  toggleHits = () => {
+  openHits = () => {
     this.setState({hitsOpen: true})
   }
 
+  closeHits = () => {
+    this.setState({hitsOpen: false})
+  }
 
 
 
@@ -47,7 +50,7 @@ export class UserSearchEngine extends Component {
     
     return (
       <div className="UserSearchEngine">
-        <UserSearchEngineBar token={this.props.token} setHitsList={this.setHitsList} toggleHits={this.toggleHits}/>
+        <UserSearchEngineBar token={this.props.token} setHitsList={this.setHitsList} openHits={this.openHits} closeHits={this.closeHits}/>
         {hits}
       </div>
     )
