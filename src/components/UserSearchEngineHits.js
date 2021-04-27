@@ -10,9 +10,11 @@ export class UserSearchEngineHits extends Component {
     super(props)
   
     this.state = {
-    selectedUsers: []
+
     }
   }
+
+  
 
   userSelected = (id) => {
     const actualUsersSelected = this.props.usersSelected
@@ -25,7 +27,6 @@ export class UserSearchEngineHits extends Component {
     const hitsList = hits ? hits.map((hit) => <UserSearchEngineHitsCheckBox hit={hit} userSelected={this.userSelected(hit.id)} addSelectedUser={this.props.addSelectedUser} removeSelectedUser={this.props.removeSelectedUser}  />) : null
     const userSelectedTiles = this.props.usersSelected.map(serializedUser => <RemovableTile itemId={serializedUser[0]} tileContent={<UserAvatar size={50} firstName={serializedUser[1]} lastName={serializedUser[2]} photoId={serializedUser[3]}/>} crossFunction={this.props.removeSelectedUser} /> )
     return (
-
       
       <div className="UserSearchEngineHits">
         <div className="usersSelected">

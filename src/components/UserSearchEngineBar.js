@@ -7,6 +7,7 @@ export class UserSearchEngineBar extends Component {
   
   handleChange = (event) => {
     console.log(event.target.value)
+    this.props.toggleHits()
     fetchUserSearchHits(this.props.token,event.target.value, this.props.setHitsList)
   }
  
