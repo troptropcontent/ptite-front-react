@@ -21,15 +21,14 @@ export class UserSearchEngineBar extends Component {
  
   handleDoneClick = (event) => {
     event.preventDefault()
-    const selectedUsersNames = this.props.inputValue.map(user => user[1])
-    this.setState({inputValue: selectedUsersNames})
+    this.setState({inputValue: ""})
     this.props.closeHits()
   }
 
   render() {
     return (
       <div className="userSearchInputZone">
-        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" placeholder={this.state.inputValue}/>
+        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" placeholder={this.props.inputValue.map(user => user[1])} value={this.state.inputValue}/>
         <a href="/" className="userSearchDoneBtn" onClick={this.handleDoneClick}>Done</a>
       </div>
     )
