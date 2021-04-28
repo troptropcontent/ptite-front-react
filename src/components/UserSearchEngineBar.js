@@ -29,7 +29,7 @@ export class UserSearchEngineBar extends Component {
   render() {
     return (
       <div className="userSearchInputZone">
-        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" value={this.state.inputValue}/>
+        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" placeholder={this.state.inputValue}/>
         <a href="/" className="userSearchDoneBtn" onClick={this.handleDoneClick}>Done</a>
       </div>
     )
