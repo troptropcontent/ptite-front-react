@@ -25,10 +25,23 @@ export class UserSearchEngineBar extends Component {
     this.props.closeHits()
   }
 
+  stringifiedUserList = () => {
+    const users = this.props.inputValue
+    const numberOfUsers = users.length
+    if (numberOfUsers <= 4) {
+      return users.map(user => user[1])
+    } else {
+      const firstsElements = users.slice(0, 4)
+      const numberOfOthers = numberOfUsers-4
+      return `${firstsElements.map(user => user[1])} and ${numberOfOthers} ${numberOfOthers === 1 ? "other" : "others"}`
+    }
+
+  }
+
   render() {
     return (
       <div className="userSearchInputZone">
-        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" placeholder={this.props.inputValue.map(user => user[1])} value={this.state.inputValue}/>
+        <input type="text" name="userInput" id="userInput" onChange={this.handleChange} autoComplete="off" placeholder={this.stringifiedUserList()} value={this.state.inputValue}/>
         <a href="/" className="userSearchDoneBtn" onClick={this.handleDoneClick}>Done</a>
       </div>
     )
