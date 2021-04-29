@@ -18,6 +18,7 @@ export class UserSearchEngine extends Component {
 
   setUserSelected = (newList) => {
     this.setState({selectedUsers: newList})
+    this.props.setInputValue(newList)
   }
 
   addSelectedUser = (user) => {
